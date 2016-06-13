@@ -18,8 +18,8 @@ var row, colors, kyrel, return_value, rando;
     'b' => blue
     'g' => green
 */
-
-var initial_state = [ '.', '.', '.', '.', '.' ];
+// Example 1
+var initial_state = [ 'b', 'b', 'b', 'b', 'b' ];
 
 function main(n) {
 
@@ -28,9 +28,10 @@ function main(n) {
   //// v YOUR CODE BELOW HERE v ////
   ////                          ////
   //////////////////////////////////
-
-
-
+ moveRight();
+ moveRight();
+ erase();
+ 
   //////////////////////////////////
   ////                          ////
   //// ^ YOUR CODE ABOVE HERE ^ ////
@@ -38,10 +39,6 @@ function main(n) {
   //////////////////////////////////
 
 } // END MAIN
-
-
-
-
 
 //////////////////////////////
 //
