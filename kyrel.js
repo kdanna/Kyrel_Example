@@ -31,7 +31,6 @@ function main(n) {
  moveRight();
  moveRight();
  erase();
- 
   //////////////////////////////////
   ////                          ////
   //// ^ YOUR CODE ABOVE HERE ^ ////
