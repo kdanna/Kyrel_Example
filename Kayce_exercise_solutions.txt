@@ -76,4 +76,92 @@ function main(n) {
 
 }
 
+DAY 3.
+	
+Example 1.
+
+var initial_state = ['b', '.', '.', '.', '.'];
+
+
+  }
+
+function main(n) {
+    
+      if (initial_state === "b"){
+         draw();
+          moveRight();
+      }
+      else if (initial_state === "g") {
+        draw();
+        moveRight();
+      }
+     
+    }
+
+Example 2.
+
+var initial_state = ['g', '.', '.', '.', '.'];
+
+//start: ['b', '.', '.', '.', '.']
+//finish: ['b', 'b', 'b', 'b', 'b']
+
+//start: ['g', '.', '.', '.', '.']
+
+//finish: ['g', 'g', 'g', 'g', 'g']
+
+function main(n) {
+      if (onBlue()){
+        useBlue();
+      }else if(onGreen()){
+        useGreen();
+      }
+      for (var i = 0; i < initial_state.length; i++){
+          draw();
+          moveRight();
+      }
+
+Example 3.
+
+var initial_state = ['.', '.', '.', '.', '.'];
+//finish: ['b', 'b', '.', '.', '.'] (given n is 2)
+//finish: ['b', 'b', 'b', '.', '.'] (given n is 3)
+var n = 3; 
+
+function main(n) {
+useBlue();
+for(var i=0; i<n; i++) {
+  draw();
+  moveRight();
+}
+}
+
+Example 4.
+
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+function main(n) {
+  for(var i = 0; i < initial_state.length ; i ++){
+    if (i % 2 === 0){
+      erase();
+    }
+  }
+
+Example 5.
+
+//start: ['b', 'b', 'b', 'b', 'b']
+//finish: ['b', '.', 'b', '.', 'b']
+
+
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+function main(n) {
+  for(var i = 0; i < initial_state.length; i++){
+    if (i%2 !== 0){
+      erase();
+    }
+    moveRight();
+  }
+  }
+
+
 

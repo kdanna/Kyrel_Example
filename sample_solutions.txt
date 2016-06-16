@@ -1,0 +1,90 @@
+Kayce Danna Kyrel Lab.
+
+DAY 1
+	Example 1. Turn the 3rd cell blue.
+
+	var initial_state = [ '.', '.', '.', '.', '.' ];
+
+	function main(n) {
+ 		moveRight();
+ 		moveRight();
+ 		useBlue();
+	} 
+
+
+	Example 2. Erase 3rd cell
+
+	var initial_state = [ 'b', 'b', 'b', 'b', 'b' ];
+
+	function main(n) {
+
+ 		moveRight();
+ 		moveRight();
+ 		erase();
+ 	}
+
+ DAY 2
+ 	Example 1. Every Other Erase
+
+ 	var initial_state = [ 'b', 'b', 'b', 'b', 'b' ];
+
+	function main(n) {
+
+ 		moveRight();
+	 	erase();
+ 		moveRight();
+ 		moveRight();
+ 		erase();
+ 		}
+
+ 	Example 2. 
+
+ 	var initial_state = [ 'g', 'g', 'g', '.', '.' ];
+
+	function main(n) {
+
+		erase(draw());
+		moveRight();
+		erase(draw());
+		moveRight();
+		erase(draw());
+		moveRight();
+		moveRight();
+		draw();
+	}
+
+	Example 3.
+
+	//option 1. var initial_state = ['b', '.', '.', '.', '.' ];
+	//option 2. var initial_state = ['g', '.', '.', '.', '.' ];
+	//option 3. var initial_state = [ '.', '.', '.', '.', '.' ];
+
+function main(n) {
+  if(onBlue()){
+    useBlue();
+  }else if (onGreen()){
+    useGreen();
+  }
+  if (onBlue() || onGreen()){
+  erase();
+  moveRight();
+  moveRight();
+  moveRight();
+  moveRight();
+  draw();
+  }
+
+}
+
+DAY 3.
+	Example 1. 
+	
+	var initial_state = ['.', '.', '.', '.', '.' ];
+
+
+	function main(n) {
+
+  	for (var i = 0; i< initial_state.length; i++){
+    	draw();
+    	moveRight();
+  	}

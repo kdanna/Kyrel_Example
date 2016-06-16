@@ -18,18 +18,18 @@ var row, colors, kyrel, return_value, rando;
     'b' => blue
     'g' => green
 */
-// Example 1
-//var initial_state = ['b', '.', '.', '.', '.' ];
-var initial_state = ['.', '.', '.', '.', '.' ];
-//var initial_state = [ '.', '.', '.', '.', '.' ];
+var initial_state = ['.', '.', '.', '.', '.'];
+//finish: ['b', 'b', '.', '.', '.'] (given n is 2)
+//finish: ['b', 'b', 'b', '.', '.'] (given n is 3)
+var n = 3; 
 
 function main(n) {
-
-  for (var i = 0; i< initial_state.length; i++){
-    draw();
-    moveRight();
-  }
-
+useBlue();
+for(var i=0; i<n; i++) {
+  draw();
+  moveRight();
+}
+}
   //////////////////////////////////
   ////                          ////
   //// v YOUR CODE BELOW HERE v ////
@@ -43,7 +43,7 @@ function main(n) {
   ////                          ////
   //////////////////////////////////
 
-} // END MAIN
+ // END MAIN
 
 //////////////////////////////
 //
@@ -160,4 +160,3 @@ $(document).ready(function() {
   initializeRow();
   updateRow();
 });
-

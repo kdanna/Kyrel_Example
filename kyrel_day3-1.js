@@ -18,17 +18,26 @@ var row, colors, kyrel, return_value, rando;
     'b' => blue
     'g' => green
 */
+var initial_state = ['b', '.', '.', '.', '.'];
+
+
 // Example 1
-//var initial_state = ['b', '.', '.', '.', '.' ];
-var initial_state = ['.', '.', '.', '.', '.' ];
-//var initial_state = [ '.', '.', '.', '.', '.' ];
+
+  }
 
 function main(n) {
+    
+      if (initial_state === "b"){
+         draw();
+          moveRight();
+      }
+      else if (initial_state === "g") {
+        draw();
+        moveRight();
+      }
+     
+    }
 
-  for (var i = 0; i< initial_state.length; i++){
-    draw();
-    moveRight();
-  }
 
   //////////////////////////////////
   ////                          ////
