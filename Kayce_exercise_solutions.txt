@@ -163,5 +163,98 @@ function main(n) {
   }
   }
 
+ DAY 4.
+
+ Example 1
+
+//start: ['.', '.', 'b', '.', '.']
+//finish: ['.', '.', 'b', 'b', 'b']*/
+
+var initial_state = ['b', '.', 'g', '.', '.'];
+
+function main(n) {
+  for(var i = 0; i < initial_state.length; i++){
+    if (onBlue()){
+        useBlue();
+     }else if (onGreen()){
+        useGreen();
+      } else{ 
+    draw(); 
+  }
+  moveRight();
+  }    
+}
+
+Example 2. 
+
+start: ['b', 'g', 'g', 'b', 'b']
+finish: ['g', 'b', 'b', 'g', 'g']
+
+start: ['b', '.', 'g', '.', 'b']
+
+finish: ['g', '.', 'b', '.', 'g']*/
+
+
+
+var initial_state = ['b', 'g', 'g', 'b', 'b'];
+
+function main(n) { 
+for(var i = 0; i < initial_state.length; i++){
+  if (onBlue()){
+    useGreen();
+    draw();
+  }else if(onGreen()){
+    useBlue();
+    draw();
+  }
+  moveRight();
+}
+}
+
+Example 3.
+
+
+var initial_state = ['b', 'b', '.', '.', '.'];
+//var newarray = initial_state.reverse();
+
+function main(n) { 
+ var newarray =[];
+
+ for(var i = 0; i < initial_state.length; i++){
+    if(onBlue()){
+      newarray[i] = "b";
+    } 
+    else if(onGreen()){
+      newarray[i] = "g";
+    }
+    else{
+      newarray[i] = ".";
+  }
+  moveRight();
+ }
+
+ for(i = 0; i < initial_state.length; i++ ){
+  if(newarray[i] === "g"){
+      useGreen();
+      draw();
+    } 
+  else if(newarray[i] === "b"){
+      useBlue();
+      draw();
+    }
+    else{
+      erase();
+  }
+  moveLeft();
+ }
+} 
+
+
+
+
+
+
+
+
 
 
