@@ -249,12 +249,95 @@ function main(n) {
  }
 } 
 
+DAY 5.
+
+Example 1.
+  var initial_state = ['.', '.', 'b', '.', '.'];
 
 
+function main(n) { 
+ for(var i = 0; i < initial_state.length; i++){
+    if(onBlue()){
+      erase();
+      moveRight();
+      useBlue();
+      draw();
+    } else if (onGreen()){
+      erase();
+      moveRight();
+      useGreen();
+      draw();
+  } else{
+    moveRight();
+ }
+  moveRight();
+}
+}
 
 
+Example 2. 
+
+var initial_state = ['g', 'b', '.', '.', '.'];
 
 
+function main(n) { 
+for(var i=0; i<initial_state.length; i++) {
+  if ( onBlue() || onGreen() ) {
+    moveLeft();
+    erase();
+    moveRight();
+  }
+  moveRight();
+}
+}
 
+
+Example 3. 
+
+note: I was on the right track with my logic of needing to count blue, but i had to peek at the solutions to fill in the gaps. I forgot that once you iterate through a for loop  your "place" is at the end of the array, so all I had to do was work backwards by the number of blues that were counted.
+
+var initial_state = ['b', '.', 'b', '.', '.'];
+
+var blueCount = 0
+
+function main(n) { 
+  for(i=0; i < initial_state.length; i++){
+    if (onBlue()){
+    blueCount = blueCount + 1;
+  }
+    erase();
+    moveRight();
+  }
+  useBlue();
+  while(blueCount--){
+    draw();
+    moveLeft();
+  }
+}
+
+Example 4. 
+
+
+var initial_state = [ '.', 'b', 'b', '.', 'b' ];
+
+var blueCount = 0;
+
+function main(n) { 
+  for(i=0; i < initial_state.length; i++){
+    if (onBlue()){
+    blueCount = blueCount + 1;
+    moveRight();
+    //we are looping through counting blue, and then moving right.
+  }
+  draw();
+  moveRight();
+  //if there isn'nt a blue we draw one and then move right.
+}
+for (var i = 0; i < (5 - blueCount); i++){
+  erase();
+  moveLeft();
+  we loop back through the array once we have our blue count. We know we have painted all blue to the left of the righ-most blue.  So know we are erasing any blues in excess left to right - since we left off on the right side of the array.
+}
+}
 
 
